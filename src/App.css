@@ -16,9 +16,8 @@ box-shadow: 0 1px #e02e2d;
   text-align: left;
   padding-left: 20px;
   margin: auto;
-  border: 2px dashed #f69c55;
+  /*border: 2px dashed #f69c55;*/
   padding: 10%, 0;
-  
 }
 
 .App-intro {
