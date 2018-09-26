@@ -14,20 +14,6 @@ export default class Cards extends Component {
   render() {
     const { title, body } = this.props;
     return (
-      /* <div className="Container">
-            <p className="App-intro">
-            {console.log('hello guys',allData)}
-            <ul>
-            {allData.map(item =>
-              <li key={item.id}>
-              Name: {item.title}
-              </li>
-            )}
-          </ul>
-
-            </p>
-            </div>*/
-
       <Col xs="4">
         <Card>
           <CardImg
@@ -48,3 +34,4 @@ export default class Cards extends Component {
 }
 
 //You're supposed to fix the cards with allData
+

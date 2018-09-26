@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-// import Card from "./Cards/Cards.js";
 import Header from "./Header/Header.js";
 import { Container } from "reactstrap";
-/*import logo from './logo.svg';*/
 import "./App.css";
 import API from "./API/API.js";
 
@@ -11,7 +9,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      allData: [],
       isLoaded: false
     };
   }
@@ -23,10 +20,12 @@ class App extends Component {
         <API />
       </Container>
     );
-  }
-}
+    }
 
+    
+  }
 export default App;
+
 
 //API
 
@@ -36,6 +35,7 @@ export default App;
 /*fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(json => console.log(json[0]))*/
+
 
 /*{
           console.log('Fugg man')
@@ -49,6 +49,8 @@ export default App;
           //let whatever = data.results.map((url))
       }*/
 
+
 /* fetch('http://modernacodechallenge.azurewebsites.net/api/insurances',{mode:'no-cors'})
       .then(response => console.log(response))
       .then(json => console.log(json))*/
+

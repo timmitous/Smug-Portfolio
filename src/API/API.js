@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-/*import logo from './logo.svg';*/
 import "../App.css";
-// import Footer from "../Footer/Footer.js";
-// import Header from "../Header/Header.js";
 import Card from "../Cards/Cards";
 import axios from "axios";
 
-const APILink = "https://jsonplaceholder.typicode.com/posts";
+const APILink = 'https://jsonplaceholder.typicode.com/posts';
 
 export default class API extends Component {
-  constructor(props) {
+
+  constructor(props){
     super(props);
 
     this.state = {
@@ -75,3 +73,4 @@ export default class API extends Component {
 }
 
 //You're supposed to fix the cards with allData
+
