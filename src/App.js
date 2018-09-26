@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 /*import logo from './logo.svg';*/
 import './App.css';
-import axios from 'axios';
+import API from './API/API.js';
 
 class App extends Component {
-    componentDidMount() {
-      console.log('Tryna fetch')
-      axios.get('https://jsonplaceholder.typicode.com/posts')
-      .catch(error => console.log('Unable to receive data', error))
-      .then(response => console.log('Received data', response.data[0]));
-     
-      }
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      allData: [],
+      isLoaded: false,
+    };
+  }
 
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          {/*<img src={logo} className="App-logo" alt="logo" /> -Useless shit*/}
-          <h1 className="App-title">Moderna{/*SOLVE VERTICAL ALIGNMENT*/}</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <footer className="App-footer">
-        </footer>
-      </div>
+      return (
+      <API />
     );
+    }
+
+    
   }
-}
 export default App;
 
 
@@ -55,9 +49,9 @@ export default App;
 
 
 
+//API
 
-
-
+  //To get started, edit <code>src/App.js</code> and save to reload.
 
 //Used for fetch api
  /*fetch('https://jsonplaceholder.typicode.com/posts')
