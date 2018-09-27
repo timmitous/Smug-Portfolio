@@ -1,22 +1,24 @@
-import React, { Component } from 'react';
-/*import logo from './logo.svg';*/
-import './App.css';
-import API from './API/API.js';
+import React, { Component } from "react";
+import Header from "./Header/Header.js";
+import { Container } from "reactstrap";
+import "./App.css";
+import API from "./API/API.js";
 
 class App extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      allData: [],
-      isLoaded: false,
+      isLoaded: false
     };
   }
 
   render() {
-      return (
-      <API />
+    return (
+      <Container>
+        <Header />
+        <API />
+      </Container>
     );
     }
 
@@ -25,36 +27,12 @@ class App extends Component {
 export default App;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //API
 
-  //To get started, edit <code>src/App.js</code> and save to reload.
+//To get started, edit <code>src/App.js</code> and save to reload.
 
 //Used for fetch api
- /*fetch('https://jsonplaceholder.typicode.com/posts')
+/*fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(json => console.log(json[0]))*/
 
@@ -70,8 +48,9 @@ export default App;
           return data;
           //let whatever = data.results.map((url))
       }*/
-    
-      
-      /* fetch('http://modernacodechallenge.azurewebsites.net/api/insurances',{mode:'no-cors'})
+
+
+/* fetch('http://modernacodechallenge.azurewebsites.net/api/insurances',{mode:'no-cors'})
       .then(response => console.log(response))
       .then(json => console.log(json))*/
+
