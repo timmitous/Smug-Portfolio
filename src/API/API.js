@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 /*import logo from './logo.svg';*/
 import '../App.css';
-import Footer from '../Footer/Footer.js';
-import Header from '../Header/Header.js';
 import axios from 'axios';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle } from 'reactstrap';
 
 const APILink = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -26,7 +26,7 @@ export default class API extends Component {
       .then(response => {console.log('Received data', response.data[0]);
                          this.setState({
                             isLoaded: true,
-                            allData: response.data 
+                            allData: response.data
                           })
                         });
       }
@@ -40,11 +40,16 @@ export default class API extends Component {
 
         else{
           return (
-          <div className="App">
-            <Header />
-            <div className="Container">
-            <p className="App-intro">
-            {console.log('hello guys',allData)}
+            <div>
+            <Card>
+              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+              </CardBody>
+            </Card>
+          </div>
             <ul>
             {allData.map(item =>
               <li key={item.id}>
@@ -52,11 +57,6 @@ export default class API extends Component {
               </li>
             )}
           </ul>
-
-            </p>
-            </div>
-            <Footer />
-          </div>
         );
         }
 

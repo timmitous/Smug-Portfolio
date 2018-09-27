@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 /*import logo from './logo.svg';*/
 import './App.css';
 import API from './API/API.js';
+import Footer from './Footer/Footer.js';
+import Header from './Header/Header.js';
+import Cards from './Cards/Cards.js';
+import Container from './Container/Container.js';
 
 class App extends Component {
 
@@ -16,7 +20,13 @@ class App extends Component {
 
   render() {
       return (
+      <div className="App">
+      <Header />
+      <div className="Container">
       <API />
+      </div>
+      <Footer />
+      </div>
     );
     }
 
