@@ -3,13 +3,6 @@
   background-color: whitesmoke;
 }
 
-.App-header {
-  background-color: #323232;
-  min-height: 40px;
-  color: white;
-  width: 100%;
-}
-
 .App-title {
   font-size: 1.5em;
   text-align: left;
@@ -35,7 +28,7 @@
   position: relative;
   z-index: 10;
   height: 3em;
-  margin-top: 30px;
+  margin-top: 3%;
 }
 
 @keyframes App-logo-spin {
@@ -45,13 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.card-body {
-  background-color: white;
-}
-
-.card {
-  box-shadow: 3px 3px #cccccc;
-  margin-bottom: 20px;
 }

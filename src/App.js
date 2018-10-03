@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./Header/Header.js";
 import "./App.css";
-import API from "./API/API.js";
-import Footer from './Footer/Footer.js';
+import Results from "./API/Results.js";
+import Footer from "./Footer/Footer.js";
 
 class App extends Component {
   constructor(props) {
@@ -18,13 +18,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="Container">
-        <API />
-      </div>
-      <Footer />
+          <Results />
+        </div>
+        <Footer />
       </div>
     );
-    }
-
-    
   }
+}
 export default App;

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "../App.css";
+import "./Results.css";
 import Card from "../Cards/Cards";
 import axios from "axios";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 const APILink = "https://jsonplaceholder.typicode.com/posts";
 
-export default class API extends Component {
+export default class Results extends Component {
   constructor(props) {
     super(props);
 
@@ -17,12 +17,12 @@ export default class API extends Component {
   }
 
   componentDidMount() {
-    console.log("Tryna fetch");
+    console.log("Attempting to fetch API");
     axios
       .get(APILink)
       .catch(error => console.log("Unable to receive data", error))
       .then(res => {
-        console.log("Received data", res.data[0]);
+        //console.log("Received data", res.data[0]);
         this.setState({
           isLoaded: true,
           allData: res.data
@@ -38,9 +38,12 @@ export default class API extends Component {
     } else {
       let theCards = this.state.allData.map(allData => {
         return (
-          <Col sm="4">
-            <Card key={allData.id} title={allData.title} body={allData.body} />
-          </Col>
+          <Card
+            key={allData.id}
+            id={allData.id}
+            title={allData.title}
+            body={allData.body}
+          />
         );
       });
       return (

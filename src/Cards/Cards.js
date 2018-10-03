@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../API/Results.css";
 import {
   Card,
   CardImg,
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  Col
 } from "reactstrap";
 
 export default class Cards extends Component {
   render() {
-    const { title, body } = this.props;
+    const { title, body, id } = this.props;
+    //console.log(this.props);
     return (
-      <div>
+      <Col sm="4" key={id}>
         <Card>
           <CardImg
             top
@@ -23,11 +25,11 @@ export default class Cards extends Component {
           />
           <CardBody>
             <CardTitle>{title}</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardSubtitle>{id}</CardSubtitle>
             <CardText>{body}</CardText>
           </CardBody>
         </Card>
-      </div>
+      </Col>
     );
   }
 }
