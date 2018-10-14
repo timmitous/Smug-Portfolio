@@ -5,7 +5,6 @@ import axios from "axios";
 import { Container, Row } from "reactstrap";
 
 const APILink = "https://jsonplaceholder.typicode.com/posts";
-let counter = -1;
 
 export default class Results extends Component {
   constructor(props) {
@@ -41,6 +40,7 @@ export default class Results extends Component {
         </div>
       );
     } else {
+      let counter = -1;
       let theCards = this.state.allData.map(allData => {
         if (counter <= 1) {
           counter++;
