@@ -34,7 +34,11 @@ export default class Results extends Component {
     const { isLoaded } = this.state;
 
     if (!isLoaded) {
-      return "Loading...";
+      return (
+        <div className="Container">
+          <p>Loading Cards...</p>
+        </div>
+      );
     } else {
       let theCards = this.state.allData.map(allData => {
         return (
@@ -47,9 +51,11 @@ export default class Results extends Component {
         );
       });
       return (
-        <Container>
-          <Row>{theCards}</Row>
-        </Container>
+        <div className="Container">
+          <Container>
+            <Row>{theCards}</Row>
+          </Container>
+        </div>
       );
     }
   }

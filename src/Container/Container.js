@@ -1,12 +1,33 @@
-import React, { Component } from "react";
-/*import logo from './logo.svg';*/
-import "../App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Results from "../API/Results.js";
 
-export default class Container extends Component {
+const allRoutes = () => (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/facts">Facts</Link>
+        </li>
+      </ul>
+
+      <Route exact path="/" component={Cards} />
+      <Route path="/facts" component={Facts} />
+    </div>
+  </Router>
+);
+
+const Cards = () => <Results />;
+
+const Facts = () => <div>hello</div>;
+/*export default class Container extends Component {
   render() {
-    return <p className="App-intro">it piss</p>;
+    return <Results />;
   }
 }
+*/
 
-//You're supposed to fix the cards with allData
+export default allRoutes;
