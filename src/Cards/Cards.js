@@ -9,10 +9,15 @@ import {
   CardSubtitle,
   Col
 } from "reactstrap";
+import image1 from "../images/flower1.jpg";
+import image2 from "../images/flower2.jpg";
+import image3 from "../images/flower3.jpg";
 
+let imagee1 = [image1, image2, image3];
 export default class Cards extends Component {
   render() {
-    const { title, body, id } = this.props;
+    const { title, body, id, number } = this.props;
+    console.log(number);
     //console.log(this.props);
     return (
       <Col sm="4" key={id}>
@@ -20,7 +25,7 @@ export default class Cards extends Component {
           <CardImg
             top
             width="100%"
-            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+            src={imagee1[number]}
             alt="Card image cap"
           />
           <CardBody>
