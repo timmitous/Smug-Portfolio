@@ -15,6 +15,7 @@ import {
   NavLink as NLink
 } from "react-router-dom";
 import Results from "../API/Results.js";
+import Facts from "../Content/Facts.js";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -40,12 +41,12 @@ export default class Example extends React.Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink tag={NLink} to="/">
+                  <NavLink to="/" activeClassName="active" tag={NLink}>
                     Components
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={NLink} to="/Facts">
+                  <NavLink tag={NLink} to="/Fact" activeClassName="active">
                     Facts
                   </NavLink>
                 </NavItem>
@@ -53,7 +54,7 @@ export default class Example extends React.Component {
             </Collapse>
           </Navbar>
           <Route exact path="/" component={Cards} />
-          <Route path="/facts" component={Facts} />
+          <Route path="/fact" component={Fact} />
         </div>
       </Router>
     );
@@ -62,8 +63,4 @@ export default class Example extends React.Component {
 
 const Cards = () => <Results />;
 
-const Facts = () => (
-  <div className="Container">
-    <div>hello</div>
-  </div>
-);
+const Fact = () => <Facts />;

@@ -10,23 +10,15 @@ import {
   Col
 } from "reactstrap";
 import image1 from "../images/flower1.jpg";
-import image2 from "../images/flower2.jpg";
-import image3 from "../images/flower3.jpg";
 
-let allImages = [image1, image2, image3];
 export default class Cards extends Component {
   render() {
-    const { title, body, id, number } = this.props;
+    const { title, body, id } = this.props;
     //console.log("number");
     return (
       <Col sm="4" key={id}>
         <Card>
-          <CardImg
-            top
-            width="100%"
-            src={allImages[number]}
-            alt="Card image cap"
-          />
+          <CardImg top width="100%" src={image1} alt="Card image cap" />
           <CardBody>
             <CardTitle>{title}</CardTitle>
             <CardSubtitle>{id}</CardSubtitle>
