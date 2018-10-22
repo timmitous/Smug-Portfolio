@@ -1,0 +1,8 @@
+.card-body {
+  background-color: white;
+}
+
+.card {
+  box-shadow: 3px 3px #cccccc;
+  margin-bottom: 20px;
+}
