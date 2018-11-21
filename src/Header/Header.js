@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import Results from "../API/Results.js";
 import Facts from "../Content/Facts.js";
+import Musics from "../Content/Music.js";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ export default class Example extends React.Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink to="/" activeClassName="active" tag={NLink}>
-                    Components
+                    Cards
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -50,11 +51,17 @@ export default class Example extends React.Component {
                     Facts
                   </NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink tag={NLink} to="/Music" activeClassName="active">
+                    Music
+                  </NavLink>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
           <Route exact path="/" component={Cards} />
           <Route path="/fact" component={Fact} />
+          <Route path="/music" component={Music} />
         </div>
       </Router>
     );
@@ -64,3 +71,5 @@ export default class Example extends React.Component {
 const Cards = () => <Results />;
 
 const Fact = () => <Facts />;
+
+const Music = () => <Musics />;
