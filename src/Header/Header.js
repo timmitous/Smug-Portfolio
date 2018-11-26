@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 import Results from "../API/Results.js";
 import Facts from "../Content/Facts.js";
-import Musics from "../Content/Music.js";
+import Musics from "../Content/MusicPlayer/Music.js";
 
 export default class Example extends React.Component {
   constructor(props) {
