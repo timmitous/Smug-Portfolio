@@ -4,6 +4,10 @@
   min-height: 100vh !important;
 }
 
+.Body {
+  min-height: 100vh;
+}
+
 .Container {
   position: relative;
   min-height: 100vh !important;
