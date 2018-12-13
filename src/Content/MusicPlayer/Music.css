@@ -1,0 +1,8 @@
+.WelcomeScreen h1 {
+  text-shadow: 1px 1px gray;
+  margin-bottom: 1.5em;
+}
+
+.WelcomeScreen {
+  padding-top: 1em;
+}
