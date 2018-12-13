@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./NewStyles.scss";
-import ole from "../../music/01-Ole.mp3";
-import paul from "../../images/paulie.jpg";
+import air from "../../music/bach/air.mp3";
+import bach from "../../images/Johann_Sebastian_Bach.jpg";
 
 console.log("Logging from Player");
 
@@ -16,16 +16,16 @@ class Player extends Component {
   constructor(props) {
     super(props);
 
-    this.audio = new Audio(ole);
+    this.audio = new Audio(air);
 
     this.infos = {
-      name: "Ole",
-      artist: "Paul Burnley",
-      album: "Save the white race",
-      year: 1992,
-      artwork: paul,
-      duration: 226,
-      source: ole
+      name: "Air on the G String",
+      artist: "Johann Sebastian Bach",
+      album: "Orchestral Suite No. 3 in D major",
+      year: "Early 1700's",
+      artwork: bach,
+      duration: 338,
+      source: air
     };
 
     this.state = {
