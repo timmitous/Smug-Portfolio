@@ -52,10 +52,11 @@ body {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 5px 10px -5px rgba($black, 1);
-  height: 667px;
+  height: 695px;
   position: relative;
   width: 375px;
-  margin-bottom: 3em;
+  margin: auto;
+  //margin-bottom: 3em;
 
   .Background {
     width: 150%;
@@ -73,7 +74,7 @@ body {
   .Title {
     width: 300px;
     margin: 50px auto;
-    font-size: 12px;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     position: relative;
@@ -94,26 +95,26 @@ body {
 
   .TrackInformation {
     width: 300px;
-    margin: 30px auto;
+    margin: 10px auto;
     text-align: center;
     position: relative;
 
     .Name {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 34px;
+      margin-bottom: 5px;
       font-weight: 300;
       color: $white;
     }
 
     .Artist {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 5px;
       font-weight: 500;
       color: $white;
     }
 
     .Album {
-      font-size: 12px;
+      font-size: 14px;
       opacity: 0.5;
       color: $white;
     }
